@@ -4,6 +4,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
+
+  // ✅ add
+  loading?: boolean
 }
 
 export function Button({
@@ -11,31 +14,46 @@ export function Button({
   variant = 'primary',
   size = 'md',
   fullWidth = false,
+  loading = false,
   className = '',
+  disabled,
   ...props
 }: ButtonProps) {
-  const baseStyles = 'font-medium rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed'
-  
+  const baseStyles =
+    'font-medium rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed'
+
   const variantStyles = {
-    primary: 'bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 shadow-sm hover:shadow-md',
+    primary:
+      'bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 shadow-sm hover:shadow-md',
     secondary: 'bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-300',
-    outline: 'border-2 border-primary-600 text-primary-600 hover:bg-primary-50 active:bg-primary-100',
+    outline:
+      'border-2 border-primary-600 text-primary-600 hover:bg-primary-50 active:bg-primary-100',
   }
-  
+
   const sizeStyles = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg',
   }
-  
+
   const widthStyle = fullWidth ? 'w-full' : ''
-  
+  const isDisabled = disabled || loading
+
   return (
     <button
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${widthStyle} ${className}`}
+      disabled={isDisabled}
+      aria-busy={loading ? true : undefined}
       {...props}
     >
-      {children}
+      {loading ? (
+        <span className="inline-flex items-center gap-2">
+          <span className="h-4 w-4 rounded-full border-2 border-current border-t-transparent animate-spin" />
+          <span>{children}</span>
+        </span>
+      ) : (
+        children
+      )}
     </button>
   )
 }
