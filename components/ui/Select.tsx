@@ -1,35 +1,66 @@
 import React from 'react'
 
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+type SelectOption = { value: string; label: string }
+
+export interface SelectProps {
   label?: string
-  error?: string
-  fullWidth?: boolean
-  options: { value: string; label: string }[]
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  className?: string
+
+  // ✅ options 变成可选（兼容两种写法）
+  options?: SelectOption[]
+
+  // ✅ 允许 children <option> 方式
+  children?: React.ReactNode
+
+  name?: string
+  id?: string
+  required?: boolean
+  disabled?: boolean
 }
 
-export function Select({ label, error, fullWidth = true, options, className = '', ...props }: SelectProps) {
-  const widthStyle = fullWidth ? 'w-full' : ''
-  
+export function Select({
+  label,
+  value,
+  onChange,
+  className = '',
+  options,
+  children,
+  name,
+  id,
+  required,
+  disabled,
+}: SelectProps) {
+  const selectId = id ?? name
+
   return (
-    <div className={widthStyle}>
-      {label && (
-        <label className="block text-sm font-medium text-slate-700 mb-2">
+    <div className={className}>
+      {label ? (
+        <label htmlFor={selectId} className="block text-sm font-medium text-slate-700 mb-2">
           {label}
         </label>
-      )}
+      ) : null}
+
       <select
-        className={`px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all bg-white ${widthStyle} ${error ? 'border-red-500' : ''} ${className}`}
-        {...props}
+        id={selectId}
+        name={name}
+        value={value}
+        onChange={onChange}
+        required={required}
+        disabled={disabled}
+        className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white"
       >
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+        {/* ✅ 优先渲染 children（你当前 ContactForm 的写法） */}
+        {children}
+
+        {/* ✅ 如果没有 children 且传了 options，则渲染 options */}
+        {!children && options?.map((opt) => (
+          <option key={opt.value} value={opt.value}>
+            {opt.label}
           </option>
         ))}
       </select>
-      {error && (
-        <p className="mt-1 text-sm text-red-600">{error}</p>
-      )}
     </div>
   )
 }
