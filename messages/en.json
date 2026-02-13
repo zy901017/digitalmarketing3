@@ -13,19 +13,29 @@
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "getStarted": "Get Started",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "services": "Services",
+    "madeWith": "Made in Adelaide"
   },
   "home": {
     "hero": {
       "title": "Grow Your Adelaide Business with Digital Marketing That Works",
       "subtitle": "Get more leads and sales without wasting budget. Specialising in Google Ads, Facebook Ads, and conversion tracking for local trades and home services.",
-      "cta": "Get Your Free Marketing Audit"
+      "cta": "Get Your Free Marketing Audit",
+      "primaryCta": "Get Your Free Marketing Audit",
+      "secondaryCta": "View Services",
+      "formTitle": "Request Your Free Audit",
+      "formSubtitle": "Tell me about your business and I’ll reply within 1 business day."
     },
     "trustBadges": {
-      "title": "Trusted Platforms We Work With"
+      "title": "Trusted Platforms We Work With",
+      "google": "Google Ads",
+      "meta": "Meta Ads",
+      "ga4": "GA4 Tracking"
     },
     "howItWorks": {
       "title": "How We Help You Grow",
+      "subtitle": "A simple, proven process to turn clicks into customers.",
       "step1": {
         "title": "Free Audit",
         "description": "We analyze your current marketing, find what's working and what's wasting money"
@@ -37,32 +47,74 @@
       "step3": {
         "title": "Optimize & Scale",
         "description": "We run and improve your campaigns while you focus on your business"
-      }
+      },
+      "step1Title": "Free Audit",
+      "step1Desc": "We review your current marketing and identify quick wins.",
+      "step2Title": "Custom Plan",
+      "step2Desc": "You get a tailored plan aligned to your goals and budget.",
+      "step3Title": "Optimize & Scale",
+      "step3Desc": "We improve performance over time while you focus on your business."
     },
     "services": {
       "title": "Services Built for Adelaide Trades & Home Services",
-      "subtitle": "Everything you need to turn clicks into customers"
+      "subtitle": "Everything you need to turn clicks into customers",
+      "viewAll": "View All Services",
+      "googleTitle": "Google Ads",
+      "googleDesc": "Show up when customers search and generate qualified enquiries.",
+      "metaTitle": "Facebook & Instagram Ads",
+      "metaDesc": "Reach local customers and retarget to increase conversions.",
+      "trackingTitle": "GA4 & Conversion Tracking",
+      "trackingDesc": "Track calls/forms reliably so you can scale with confidence."
     },
     "caseStudies": {
       "title": "Real Results from Real Adelaide Businesses",
-      "viewAll": "View All Case Studies"
+      "viewAll": "View All Case Studies",
+      "subtitle": "Anonymised examples from trades & home services."
     },
     "testimonials": {
-      "title": "What Our Clients Say"
+      "title": "What Our Clients Say",
+      "subtitle": "Real feedback from local business owners.",
+      "t1Name": "Local Trades Owner",
+      "t1Role": "Adelaide",
+      "t1Content": "Clear plan, clear reporting, and more enquiries within weeks.",
+      "t2Name": "Home Services Business",
+      "t2Role": "South Australia",
+      "t2Content": "Tracking finally makes sense and we’re wasting less spend now."
     },
     "faq": {
-      "title": "Common Questions"
+      "title": "Common Questions",
+      "q1": "How fast can I see results?",
+      "a1": "Typically 2–4 weeks for stable trends, depending on budget and history.",
+      "q2": "Do you require long contracts?",
+      "a2": "No. Month-to-month options are available.",
+      "q3": "What budget do I need?",
+      "a3": "We can start lean. After the audit, I’ll recommend a minimum viable budget.",
+      "q4": "Do you handle tracking?",
+      "a4": "Yes—GA4/GTM conversion tracking is part of the setup.",
+      "q5": "Can you fix an existing messy account?",
+      "a5": "Yes. Cleanup and restructure is a common engagement.",
+      "q6": "Do you work with trades/home services?",
+      "a6": "Yes—this site is designed specifically for trades & home services.",
+      "q7": "How do we start?",
+      "a7": "Submit the form → free audit → 7-day action plan.",
+      "q8": "How do you report performance?",
+      "a8": "Simple weekly checkpoints + monthly performance review tied to leads and cost."
     },
     "risk": {
       "title": "Zero Risk, Real Results",
       "item1": "Free marketing audit - no strings attached",
       "item2": "No lock-in contracts",
-      "item3": "Reply within 1 business day"
+      "item3": "Reply within 1 business day",
+      "b1": "Free marketing audit — no obligation",
+      "b2": "No lock-in contracts",
+      "b3": "Reply within 1 business day"
     },
     "finalCTA": {
       "title": "Ready to Grow Your Business?",
       "subtitle": "Get your free marketing audit and custom growth plan",
-      "cta": "Book Your Free Strategy Call"
+      "cta": "Book Your Free Strategy Call",
+      "formTitle": "Get a Free Strategy Call",
+      "formSubtitle": "Share your details and I’ll send next steps."
     }
   },
   "services": {
@@ -77,62 +129,32 @@
     "googleAds": {
       "title": "Google Ads Management",
       "description": "Show up when customers search for your services. Get qualified leads ready to book.",
-      "features": [
-        "Search Ads",
-        "Local Service Ads",
-        "Google Maps",
-        "Remarketing"
-      ]
+      "features": ["Search Ads", "Local Service Ads", "Google Maps", "Remarketing"]
     },
     "facebookAds": {
       "title": "Facebook & Instagram Ads",
       "description": "Reach your ideal customers where they spend time. Build awareness and drive conversions.",
-      "features": [
-        "Lead Generation",
-        "Brand Awareness",
-        "Retargeting",
-        "Lookalike Audiences"
-      ]
+      "features": ["Lead Generation", "Brand Awareness", "Retargeting", "Lookalike Audiences"]
     },
     "seo": {
       "title": "Local SEO",
       "description": "Get found organically when people search for your services in Adelaide.",
-      "features": [
-        "Google Business Profile",
-        "Local Citations",
-        "On-Page SEO",
-        "Content Strategy"
-      ]
+      "features": ["Google Business Profile", "Local Citations", "On-Page SEO", "Content Strategy"]
     },
     "analytics": {
       "title": "Analytics & Tracking",
       "description": "Know exactly what's working. Track leads, sales, and ROI accurately.",
-      "features": [
-        "GA4 Setup",
-        "Conversion Tracking",
-        "Call Tracking",
-        "Custom Dashboards"
-      ]
+      "features": ["GA4 Setup", "Conversion Tracking", "Call Tracking", "Custom Dashboards"]
     },
     "landingPages": {
       "title": "Landing Pages",
       "description": "High-converting pages designed to turn traffic into leads and customers.",
-      "features": [
-        "Mobile-First Design",
-        "A/B Testing",
-        "Fast Loading",
-        "Lead Forms"
-      ]
+      "features": ["Mobile-First Design", "A/B Testing", "Fast Loading", "Lead Forms"]
     },
     "cro": {
       "title": "Conversion Optimization",
       "description": "Get more from your existing traffic. Improve conversion rates across your funnel.",
-      "features": [
-        "User Testing",
-        "Heatmaps",
-        "Form Optimization",
-        "Split Testing"
-      ]
+      "features": ["User Testing", "Heatmaps", "Form Optimization", "Split Testing"]
     }
   },
   "about": {
